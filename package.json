@@ -1,0 +1,12 @@
+{
+  "name": "ai-office-template",
+  "version": "0.1.0",
+  "description": "A calm, read-only office board for your AI agents and the programs they run.",
+  "type": "module",
+  "license": "MIT",
+  "engines": { "node": ">=18" },
+  "scripts": {
+    "start": "node server.js",
+    "test": "node --test tests/status.test.js"
+  }
+}

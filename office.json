@@ -1,0 +1,25 @@
+{
+  "title": "나의 AI 사무실",
+  "port": 4310,
+  "demo": true,
+  "agents": [
+    { "id": "coder", "name": "코더", "role": "코드 작성", "color": "#2dd4bf", "shape": "ears" },
+    { "id": "scout", "name": "스카우트", "role": "자료 조사", "color": "#a78bfa", "shape": "horns" },
+    { "id": "planner", "name": "플래너", "role": "설계·검토", "color": "#f4a582", "shape": "round" },
+    { "id": "writer", "name": "라이터", "role": "요약·글쓰기", "color": "#7dd3fc", "shape": "antenna" }
+  ],
+  "projects": [
+    { "id": "budget", "name": "가계부 웹앱", "kind": "service", "owner": "coder", "pm2": "budget-app", "health_url": "http://127.0.0.1:5173/",
+      "note": "매달 지출을 정리하는 작은 웹앱", "tasks": ["카테고리별 그래프", "CSV 내보내기"] },
+    { "id": "newsbot", "name": "뉴스 요약 봇", "kind": "service", "owner": "writer", "pm2": "news-bot",
+      "note": "아침마다 관심 분야 소식을 요약" },
+    { "id": "crawler", "name": "자료 수집기", "kind": "service", "owner": "scout", "pm2": "crawler",
+      "note": "공개 RSS만 모읍니다" },
+    { "id": "notes", "name": "메모 정리기", "kind": "service", "owner": "writer",
+      "note": "자동 확인 설정이 없으면 '미확인'으로 보여요" },
+    { "id": "blog", "name": "개인 블로그", "kind": "website", "owner": "planner", "url": "https://example.com/", "health_url": "https://example.com/",
+      "note": "주소 응답만 확인합니다" },
+    { "id": "game", "name": "게임 기획", "kind": "planned", "owner": "planner",
+      "note": "아직 실행할 프로그램이 없는 계획 단계", "tasks": ["첫 무대 정하기", "그림체 테스트"] }
+  ]
+}

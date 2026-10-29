@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AI Office</title>
+<link rel="icon" href="icon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="top">
+  <div class="brand">
+    <h1 id="title">AI Office</h1>
+    <p class="sub">AI 직원과 그들이 돌리는 프로그램을 한눈에 · 읽기 전용</p>
+  </div>
+  <div class="top-right">
+    <span id="demo" class="badge" hidden>데모 모드</span>
+    <label class="switch"><input type="checkbox" id="calm"> 움직임 줄이기</label>
+  </div>
+</header>
+
+<main>
+  <section aria-labelledby="h-agents">
+    <h2 id="h-agents">AI 직원</h2>
+    <div id="agents" class="agents"></div>
+  </section>
+
+  <section aria-labelledby="h-projects">
+    <div class="row">
+      <h2 id="h-projects">프로젝트</h2>
+      <div id="filters" class="filters" role="group" aria-label="상태로 거르기"></div>
+    </div>
+    <div id="projects" class="grid"></div>
+    <p id="empty" class="muted" hidden>조건에 맞는 프로젝트가 없어요.</p>
+  </section>
+</main>
+
+<footer class="foot"><span id="checked">상태 확인 중…</span> · '미확인'은 확인하지 못했다는 뜻이지, 멈췄다는 뜻이 아니에요.</footer>
+
+<dialog id="detail" aria-labelledby="d-name">
+  <form method="dialog"><button class="close" aria-label="닫기">✕</button></form>
+  <div id="d-body"></div>
+</dialog>
+<script type="module" src="app.js"></script>
+</body>
+</html>
